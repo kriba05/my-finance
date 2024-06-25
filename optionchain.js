@@ -1,4 +1,3 @@
-// import syntax (recommended)
 import yahooFinance from 'yahoo-finance2';
 
 const queryOptions = { lang: 'en-US', formatted: false, region: 'US'};
@@ -14,8 +13,8 @@ tickers.forEach(async ticker => {
         let opts = { lang: 'en-US', formatted: false, region: 'US', date: expirationDate};
         const optionsData = await yahooFinance.options(ticker, opts);
         console.log(`Option expiry Date: ${expirationDate}`)
-        //console.log(optionsData.options[0].calls);
-        //console.log(optionsData.options[0].puts);
+        console.log(optionsData.options[0].calls);
+        console.log(optionsData.options[0].puts);
         console.log("===========================================");
     });
     
